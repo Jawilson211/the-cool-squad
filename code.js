@@ -16,6 +16,9 @@ let gridItems = document.getElementsByClassName("grid")
 const draw = "Game was a draw!"
 const errorMsg = "Please pick an empty space!"
 
+var winSfx = new Audio('congrats.mp3');
+var drawSfx = new Audio('quack.mp3');
+
 function updateGameState(num){
     if(!spaces[num] == "") {
         console.log("Help me")
@@ -69,18 +72,21 @@ function winChecker() {
 function gameOver(result) {
     if(result == "x"){
         console.log("win")
+        winSfx.play();
         activePlayer = "X"
         messageBox.innerHTML = "Player X wins!"
         setTimeout(function() { restart(); }, 2000);
     }
     if(result == "o"){
         console.log("win")
+        winSfx.play();
         activePlayer = "O"
         messageBox.innerHTML = "Player O wins!"
         setTimeout(function() { restart(); }, 2000);
     }
     if(result == "draw"){
         console.log("win")
+        drawSfx.play();
         messageBox.innerHTML = draw
         setTimeout(function() { restart(); }, 2000);
     }
@@ -94,6 +100,8 @@ function restart() {
     }
     messageBox.innerHTML = "It's Player " + activePlayer +"'s turn"
 }
+
+
 
 gridItems[0].addEventListener("click", function(){ updateGameState(0); })
 gridItems[1].addEventListener("click", function(){ updateGameState(1); })
