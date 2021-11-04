@@ -45,7 +45,6 @@ function updateGrid() {
     
     winChecker()
 }
-
 function winChecker() {
     console.log("check win")
     for(i=0; i<winCon.length; i++){
@@ -56,9 +55,73 @@ function winChecker() {
 
         if(one == "X" && two == "X" && three == "X"){
             console.log("X wins")
+            if(i == 0)
+            {
+                $("#topLeftTopRight").css("visibility", "visible")
+            }
+            else if(i == 1)
+            {
+                $("#midLeftMidRight").css("visibility", "visible")
+            }
+            else if(i == 2)
+            {
+                $("#botLeftBotRight").css("visibility", "visible")
+            }
+            else if(i == 3)
+            {
+                $("#topLeftBotLeft").css("visibility", "visible")
+            }
+            else if(i == 4)
+            {
+                $("#topMidBotMid").css("visibility", "visible")
+            }
+            else if(i == 5)
+            {
+                $("#topRightBotRight").css("visibility", "visible")
+            }
+            else if(i == 6)
+            {
+                $("#topLeftBotRight").css("visibility", "visible")
+            }
+            else if(i == 7)
+            {
+                $("#botLeftTopRight").css("visibility", "visible")
+            }
             gameOver("x")
         } else if(one == "O" && two == "O" && three == "O"){
             console.log("O wins")
+            if(i == 0)
+            {
+                $("#topLeftTopRight").css("visibility", "visible")
+            }
+            else if(i == 1)
+            {
+                $("#midLeftMidRight").css("visibility", "visible")
+            }
+            else if(i == 2)
+            {
+                $("#botLeftBotRight").css("visibility", "visible")
+            }
+            else if(i == 3)
+            {
+                $("#topLeftBotLeft").css("visibility", "visible")
+            }
+            else if(i == 4)
+            {
+                $("#topMidBotMid").css("visibility", "visible")
+            }
+            else if(i == 5)
+            {
+                $("#topRightBotRight").css("visibility", "visible")
+            }
+            else if(i == 6)
+            {
+                $("#topLeftBotRight").css("visibility", "visible")
+            }
+            else if(i == 7)
+            {
+                $("#botLeftTopRight").css("visibility", "visible")
+            }
             gameOver("o")
         } else if(!spaces.includes("")){
             gameOver("draw")
@@ -93,6 +156,14 @@ function restart() {
         gridItems[i].innerHTML = ""
     }
     messageBox.innerHTML = "It's Player " + activePlayer +"'s turn"
+    $("#topLeftTopRight").css("visibility", "hidden")
+    $("#midLeftMidRight").css("visibility", "hidden")
+    $("#botLeftBotRight").css("visibility", "hidden")
+    $("#topLeftBotLeft").css("visibility", "hidden")
+    $("#topMidBotMid").css("visibility", "hidden")
+    $("#topRightBotRight").css("visibility", "hidden")
+    $("#topLeftBotRight").css("visibility", "hidden")
+    $("#botLeftTopRight").css("visibility", "hidden")
 }
 
 gridItems[0].addEventListener("click", function(){ updateGameState(0); })

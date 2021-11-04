@@ -102,3 +102,17 @@ td#t8 {
     border-color: black;
     border-style: solid;
 }
+.hide
+{
+    visibility: hidden;
+    position: absolute;
+}
+.show
+{
+    visibility: visible;
+    position: absolute;
+}
+#botLeftTopRight
+{
+    transform:rotate(90deg)
+}
