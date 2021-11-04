@@ -5,23 +5,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="tictactoetemp.css">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
         <title>Tic Tac Toe</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <div class = main-box>
-        <img class="img" src="grid.png">
-        <div class="nine-box">
-        <div class="grid" id="0">x</div>
-        <div class="grid" id="1">x</div>
-        <div class="grid" id="2">x</div>
-        <div class="grid" id="3">x</div>
-        <div class="grid" id="4">x</div>
-        <div class="grid" id="5">x</div>
-        <div class="grid" id="6">x</div>
-        <div class="grid" id="7">x</div>
-        <div class="grid" id="8">o</div>
-        </div>
-        </div>
         <div id="text">Game state</div>
+        <div class ="main-box">
+            <div class="nine-box">
+                <table>
+                    <tr>
+                        <td class="grid" id="t0"></td>
+                        <td class="grid" id="t1"></td>
+                        <td class="grid" id="t2"></td>
+                    </tr>
+                    <tr>
+                        <td class="grid" id="t3"></td>
+                        <td class="grid" id="t4"></td>
+                        <td class="grid" id="t5"></td>
+                    </tr>
+                    <tr>
+                        <td class="grid" id="t6"></td>
+                        <td class="grid" id="t7"></td>
+                        <td class="grid" id="t8"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
+    <script src="code.js"></script>
 </html
